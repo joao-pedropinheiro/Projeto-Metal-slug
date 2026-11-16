@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Metal Slug</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="lobby">
+
+        <h1>METAL SLUG</h1>
+
+        <p>ESCOLHA SEU PERSONAGEM</p>
+
+        <div id="selecao">
+
+            <div id="opcao1" class="opcao">
+                <img src="imagens/refem.gif" alt="Refém masculino">
+                <p>REFÉM M.</p>
+                <button onclick="selecionarPersonagem(1)">1</button>
+            </div>
+
+            <div id="opcao2" class="opcao">
+                <img src="imagens/refemF.gif" alt="Refém feminino">
+                <p>REFÉM F.</p>
+                <button onclick="selecionarPersonagem(2)">2</button>
+            </div>
+
+        </div>
+
+        <p id="mensagem">ESCOLHA UM PERSONAGEM</p>
+
+        <button id="iniciar" onclick="iniciarJogo()">
+            INICIAR (ENTER)
+        </button>
+
+    </div>
+
+    <div id="telajogo">
+
+        <img src="imagens/fundo.png" class="fundo" id="fundo1" alt="">
+        <img src="imagens/fundo.png" class="fundo" id="fundo2" alt="">
+
+        <img src="imagens/refem.gif" class="personagem" id="refem" alt="Personagem">
+
+        <img src="imagens/mecha2_recortado.gif" id="inimigo1" alt="Inimigo">
+        <img src="imagens/itemcorrigido.png" id="item" alt="Item">
+
+        <div id="pontuacao">
+            Pontos: 0
+        </div>
+
+        <div id="tempo">
+            Tempo: 10
+        </div>
+
+        <img src="imagens/gameover.png" id="gameover" alt="Game Over">
+
+        <input
+            type="button"
+            id="reiniciar"
+            value="JOGAR NOVAMENTE"
+            onclick="reiniciarJogo()"
+        >
+
+        <div id="final">
+
+            <img src="imagens/capa.png" alt="Capa do jogo">
+
+            <p>Fase Concluída!</p>
+
+            <p id="pontuacaofinal"></p>
+
+            <input
+                type="button"
+                id="reiniciar2"
+                value="JOGAR NOVAMENTE"
+                onclick="reiniciarJogo()"
+            >
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

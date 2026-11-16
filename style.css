@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+#telajogo {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-bottom: 5px solid #FFF078;
+}
+
+img.fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    object-fit: initial;
+}
+
+img.personagem {
+    display: none;
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+}
+
+img.personagem.personagem-feminina {
+    width: 130px;
+}
+
+.pulo {
+    animation: animacaoPersonagem 500ms linear;
+}
+
+@keyframes animacaoPersonagem {
+    0% {
+        bottom: 100px;
+    }
+
+    40% {
+        bottom: 280px;
+    }
+
+    50% {
+        bottom: 280px;
+    }
+
+    100% {
+        bottom: 100px;
+    }
+}
+
+img#inimigo1 {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    right: -80px;
+}
+
+@keyframes animacaoInimigo {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+img#item {
+    position: absolute;
+    visibility: visible;
+    width: 120px;
+    bottom: 300px;
+    right: -80px;
+}
+
+@keyframes animacaoItem {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes moverFundo {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moverFundo2 {
+    from {
+        transform: translateX(99%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+#pontuacao {
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    top: 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px;
+    margin-left: 1%;
+}
+
+#tempo {
+    position: absolute;
+    top: 20px;
+    margin-left: 15%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 35px;
+    color: white;
+}
+
+#gameover {
+    position: absolute;
+    width: 50%;
+    left: 22%;
+    top: 10%;
+    visibility: hidden;
+}
+
+#final {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 60%;
+    text-align: center;
+    font-size: 40px;
+    color: #FFF078;
+    background-color: black;
+    border: 3px solid #FFF078;
+    border-radius: 20px;
+    padding: 25px;
+    visibility: hidden;
+    z-index: 20;
+}
+
+#final img {
+    width: 50%;
+}
+
+#reiniciar2 {
+    position: absolute;
+    left: 39%;
+    margin-top: 5%;
+    width: auto;
+    padding: 1%;
+    visibility: hidden;
+    background-color: black;
+    color: #FFF078;
+    border-radius: 50px;
+    border: 3px solid #FFF078;
+}
+
+#reiniciar {
+    position: absolute;
+    left: 46%;
+    top: 500px;
+    height: 5%;
+    width: auto;
+    visibility: hidden;
+    background-color: #F94A00;
+    color: white;
+    font-family: Verdana;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+#lobby {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 30;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#lobby h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #FFF078;
+}
+
+#lobby p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#selecao {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.opcao {
+    width: 180px;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.opcao img {
+    width: 130px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.opcao button {
+    width: 50px;
+    padding: 8px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.selecionado {
+    border: 3px solid #FFF078;
+}
+
+#mensagem {
+    margin-top: 30px;
+}
+
+#iniciar {
+    padding: 10px 25px;
+    background-color: #FFF078;
+    border: none;
+    cursor: pointer;
+}
